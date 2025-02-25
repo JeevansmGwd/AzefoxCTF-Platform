@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+</head>
+<body>
+    <h1>Search</h1>
+    <form method="GET" action="{% url 'search_results' %}">
+        <input type="search" name="q" placeholder="Search" aria-label="Search">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

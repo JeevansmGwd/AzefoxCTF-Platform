@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to Azefox</h1>
+<p>Your one-stop solution for all your needs. Explore our features and services designed to help you succeed.</p>
+
+<div class="features">
+    <h2>Key Features</h2>
+    <ul>
+        <li>Feature 1: Description of feature 1.</li>
+        <li>Feature 2: Description of feature 2.</li>
+        <li>Feature 3: Description of feature 3.</li>
+    </ul>
+</div>
+
+<a href="{% url 'challenges' %}" class="btn btn-primary">Explore Challenges</a>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact Us</h1>
+<p>We would love to hear from you! Please fill out the form below or reach out to us through the provided contact information.</p>
+
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
+<h2>Contact Information</h2>
+<p>Email: contact@azefox.com</p>
+<p>Phone: (123) 456-7890</p>
+<p>Follow us on social media:</p>
+<ul>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Instagram</a></li>
+</ul>
+{% endblock %}

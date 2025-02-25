@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}  <!-- Add this line to load static files -->
+{% block content %}
+<h1>Challenges</h1>
+<p>Welcome to the Azefox Challenges page! Here you can find various challenges designed to test your skills and creativity.</p>
+
+<h2>Available Challenges</h2>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card">
+        <img height="250" width="250" src="{% static 'images/azefoxLogo.jpeg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Challenge 1</h5>
+          <p class="card-text">Description of Challenge 1. Participate and showcase your skills!</p>
+          <a href="#" class="btn btn-primary">Join Challenge</a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat similar card structure for other challenges -->
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card">
+        <img height="250" width="250" src="{% static 'images/azefoxLogo.jpeg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Challenge 2</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Join Challenge</a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat similar card structure for other cards -->
+</div>
+{% endblock %}
