@@ -38,8 +38,8 @@ This project is a Django-based Capture The Flag (CTF) platform designed for user
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/JeevansmGwd/CTF_Platform
-   cd CTF_Platform
+   git clone https://github.com/JeevansmGwd/AzefoxCTF-Platform
+   cd AzefoxCTF-Platform
    ```
 
 2. Install the required packages:
