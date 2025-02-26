@@ -12,6 +12,8 @@ services:
       MYSQL_PASSWORD: mypassword
     ports:
       - "3306:3306" # Fixed port mapping to avoid conflicts
+    volumes:
+      - db_data:/var/lib/mysql  # ✅ Correct placement
     networks:
       - mynetwork
 
