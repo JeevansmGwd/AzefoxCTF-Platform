@@ -80,3 +80,20 @@ main {
 
 .fw-semibold { font-weight: 600; }
 .lh-tight { line-height: 1.25; }
+
+.nav-pills .nav-link {
+  color: #000;  /* Default text color */
+  background-color: transparent; /* No background by default */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #ddd; /* Light grey on hover */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff !important; /* Blue for active tab */
+  color: #fff !important;
+  font-weight: bold;
+}
+

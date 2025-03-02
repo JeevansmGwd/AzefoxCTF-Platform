@@ -19,6 +19,56 @@
         padding: 10px;
         margin-left: 20%;
       }
+            /* Ensure body and html take full height */
+      html, body {
+          height: 100%;
+          margin: 0;
+          display: flex;
+      }
+
+      /* Sidebar styles */
+      .sidebar {
+          position: fixed;  /* Sticks to the left */
+          top: 56px;  /* Adjust based on navbar height */
+          left: 0;
+          width: 260px;  /* Set fixed width */
+          height: calc(100vh - 56px);  /* Take full height minus navbar */
+          background-color: #f8f9fa;  /* Light grey background */
+          padding: 20px 0px;
+          overflow-y: auto;  /* Allows scrolling if content overflows */
+      }
+
+      /* Main content area */
+      .main-content {
+          margin-left: 260px;  /* Push content to right of sidebar */
+          padding: 20px;
+          flex-grow: 1;
+      }
+
+      .nav-pills .nav-link {
+          color: #000;  /* Default text color */
+          background-color: transparent; /* No background by default */
+          transition: all 0.3s ease-in-out;
+
+      }
+
+      .nav-pills .nav-link:hover {
+          background-color: #ddd; /* Light grey on hover */
+      }
+
+      .nav-pills .nav-link .active {
+          background-color: #007bff !important; /* Blue for active tab */
+          color: #fff !important;
+          font-weight: bold;
+      }
+
+      
+
+      
+
+
+
+    
     </style>
   </head>
 <body>
@@ -50,7 +100,7 @@
               <img height="20px" width="20px" src="../assets/brand/settings.png">
             </button>
             <ul class="dropdown-menu" id="customDropdown">
-              <li><a class="dropdown-item" href="../manage-accont/manageAcount.html">Manage Account</a></li>
+              <li><a class="dropdown-item" href="../manage-account/profile.html">Manage Account</a></li>
               <li><a class="dropdown-item" href="../sign-in/sign-in.html">Log Out</a></li>
             </ul>
           </div>
@@ -60,59 +110,42 @@
   </nav>
 </section> 
 
-
-<section>
-  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
-
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="manageAcount.html" class="nav-link active" aria-current="page">
-  
+<main class="d-flex">
+  <div class="sidebar">
+    <ul class="nav nav-pills flex-column mb-auto nav-item-sidebar">
+      <li>
+        <a href="profile.html" class="nav-link link-dark" aria-current="page">
           Profile
         </a>
       </li>
       <li>
-        <a href="badges.html" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+        <a href="badges.html" class="nav-link active">
           Badges
         </a>
       </li>
       <li>
         <a href="completedChallenges.html" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Completed Rooms
         </a>
       </li>
       <li>
         <a href="deleteAccount.html" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Delete Account
         </a>
       </li>
       
-    </ul>
-  
+    </ul> 
+  </div>
+  <div class="main-content">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>This is where your main content goes.</p>
   </div>
 
-</section>
-  
-  <main>
 
-    <div id="placement" class="card" style="width: 50%;">
-        <div class="card-body">
-          <h5 class="card-title">Delete Account</h5>
-          <h6 class="card-subtitle">Are you sure you want to delete your account?</h6>
-          <p class="card-text">Warning: after deletion you won't be able to retrieve your progress</p>
-          <div id="placement"> 
-            <button type="button" class="btn btn-secondary">Delete Account</button>
-          </div>       
-        </div>
-      </div>
   
-  
-    
 
-  </main>
+
+</main>
   
   
       <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
