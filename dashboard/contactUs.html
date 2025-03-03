@@ -2,56 +2,114 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
   
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="contact-styles.css">
+
+
+
   </head>
+  
 <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
-    
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../CTF Challenges/challenge.html">CTF Challenges </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../dashboard/aboutUs.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../dashboard/contactUs.html">Contact Us</a>
-        </li>
-      </ul>
-      <form class="d-flex navbar-center">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <div class="ms-auto position-relative"> <!-- Ensures the dropdown stays aligned -->
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img height="20px" width="20px" src="../assets/brand/settings.png">
-          </button>
-          <ul class="dropdown-menu" id="customDropdown">
-            <li><a class="dropdown-item" href="../manage-account/profile.html">Manage Account</a></li>
-            <li><a class="dropdown-item" href="../sign-in/sign-in.html">Log Out</a></li>
-          </ul>
+<section>
+  <nav style="margin-bottom: 0% !important" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+      
+      
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../CTF Challenges/challenge.html">CTF Challenges </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dashboard/aboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dashboard/contactUs.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex navbar-center">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="ms-auto position-relative"> <!-- Ensures the dropdown stays aligned -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img height="20px" width="20px" src="../assets/brand/settings.png">
+            </button>
+            <ul class="dropdown-menu" id="customDropdown">
+              <li><a class="dropdown-item" href="../manage-account/profile.html">Manage Account</a></li>
+              <li><a class="dropdown-item" href="../sign-in/sign-in.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</section>  
+
+
+<section class="contact">
+  <div class="content">
+    <h2>Contact Us </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius sequi tempore nisi doloribus voluptas quaerat. Voluptas ad corrupti ducimus sit. Autem modi repudiandae veniam architecto sit dicta maiores enim?</p>
+  </div>
+  <div class="custom-container">
+    <div class="contact-info">
+      <div class="box">
+        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="text">
+          <h3>Address</h3>
+          <p>bkjnknsloerngera</p>
         </div>
-      </div>    
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="text">
+          <h3>Email</h3>
+          <p>bkjnknsloerngera</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="text">
+          <h3>Phone</h3>
+          <p>bkjnknsloerngera</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form>
+        <h2>Send Message</h2>
+        <div class="input-box">
+          <input type="text" name="" required="required">
+          <span>Full Name</span>
+        </div>
+        <div class="input-box">
+          <input type="text" name="" required="required">
+          <span>Email</span>
+        </div>
+        <div class="input-box">
+          <textarea required="required"></textarea>
+          <span>Type your Message...</span>
+        </div>
+        <div class="input-box">
+          <input type="submit" name="" value="submit">        
+        </div>
+      </form>
     </div>
   </div>
-</nav>
 
-<h3>contact us at</h3>
+</section>
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
