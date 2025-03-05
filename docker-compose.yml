@@ -1,42 +1,53 @@
+#version: "3.8"
+#
+#services:
+#  project_db_1:
+#    image: mysql:latest
+#    container_name: project_db_1  # Ensure container name is consistent
+#    restart: alway
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: mydatabase
+#      MYSQL_USER: myuser
+#      MYSQL_PASSWORD: mypassword
+#    ports:
+#      - "3306:3306" # Fixed port mapping to avoid conflicts
+#    volumes:
+#      - db_data:/var/lib/mysql  # ✅ Correct placement
+#    networks:
+#      - mynetwork
+#
+#  web:
+#    build: .
+#    restart: always
+#    depends_on:
+#      - project_db_1  # Fixed service name to match actual database container
+#    volumes:
+#      - db_data:/var/lib/mysql  # Add this line for data persistence
+#    ports:
+#      - "8000:8000"
+#    environment:
+#      - DB_HOST=project_db_1  # Fixed DB_HOST to match the database service name
+#      - DB_NAME=mydatabase
+#      - DB_USER=myuser
+#      - DB_PASSWORD=mypassword
+#    networks:
+#      - mynetwork
+#
+#volumes:
+#  db_data:  # Define the volume here
+#
+#networks:
+#  mynetwork:
+#    driver: bridge  # Ensure a valid driver is specified
+#
 version: "3.8"
 
 services:
-  project_db_1:
-    image: mysql:latest
-    container_name: project_db_1  # Ensure container name is consistent
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
-    ports:
-      - "3306:3306" # Fixed port mapping to avoid conflicts
-    volumes:
-      - db_data:/var/lib/mysql  # ✅ Correct placement
-    networks:
-      - mynetwork
-
   web:
     build: .
-    restart: always
-    depends_on:
-      - project_db_1  # Fixed service name to match actual database container
-    volumes:
-      - db_data:/var/lib/mysql  # Add this line for data persistence
     ports:
-      - "8000:8000"
-    environment:
-      - DB_HOST=project_db_1  # Fixed DB_HOST to match the database service name
-      - DB_NAME=mydatabase
-      - DB_USER=myuser
-      - DB_PASSWORD=mypassword
-    networks:
-      - mynetwork
-
-volumes:
-  db_data:  # Define the volume here
-
-networks:
-  mynetwork:
-    driver: bridge  # Ensure a valid driver is specified
+      - "8080:80"   # Maps container port 80 to localhost:8080
+    volumes:
+      - ./Azefox:/usr/share/nginx/html  # Mount your website folder
+    restart: always

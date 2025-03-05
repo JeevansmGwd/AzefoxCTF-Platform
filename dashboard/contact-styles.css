@@ -84,3 +84,72 @@ body, html {
     padding: 40px;
     background: #fff;
 }
+.contact-form h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+    
+    width: 100%;
+    padding: 5px 0;
+    font-size:16px;
+    margin:10px 0;
+    border: none;
+    border-bottom:2px solid #333;  
+    resize: none;
+    
+}
+.contact-form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size:16px;
+    margin:10px 0;
+    pointer-events:none;
+    transition: 0.5s;
+    color:#666;
+}
+.contact-form .input-box input:focus + span,
+.contact-form .input-box input:valid + span,
+.contact-form .input-box textarea:focus + span,
+.contact-form .input-box textarea:valid + span {
+    color: rgb(174, 139, 47);
+    font-size: 12px;
+    transform: translateY(-25px);
+   
+}
+
+.contact-form .input-box input[type="submit"]{
+    width: 100px;
+    background: rgb(174, 139, 47);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media(max-width: 991px)
+{
+    .contact{
+        padding: 50px;
+    }
+    .custom-container{
+        flex-direction: column;
+    }
+    .custom-container .contact-info{
+        margin-bottom: 40px;
+    }
+    .custom-container .contact-info{
+        width: 100%;
+    }
+}

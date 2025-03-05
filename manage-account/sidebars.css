@@ -91,8 +91,8 @@ main {
   background-color: #ddd; /* Light grey on hover */
 }
 
-.nav-pills .nav-link.active {
-  background-color: #007bff !important; /* Blue for active tab */
+.nav-pills .nav-link .active {
+  background-color: rgb(174, 139, 47) !important; /* Blue for active tab */
   color: #fff !important;
   font-weight: bold;
 }
