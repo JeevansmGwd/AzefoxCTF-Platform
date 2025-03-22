@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Teams - CTF</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .navbar {
+      background-color: #1e1e1e !important;
+    }
+    .nav-link {
+      color: #bbb;
+    }
+    .nav-link.active {
+      color: #ffffff;
+      border-bottom: 2px solid #4caf50;
+    }
+
+    .nav-link:hover {
+      color: black;
+      background-color: aliceblue;
+      border-bottom: 2px solid #4caf50;
+    }
+    .team-card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .team-card:hover {
+      background-color: #2a2a2a;
+    }
+    .badge-status {
+      background-color: #ff4081;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .btn-primary, .btn-outline-light {
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../challenges/challenge.html">CTF Challenges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/completedChallenges.html">Completed Machines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/badges.html">Badges</a>
+        </li>
+      </ul>
+      <form class="d-flex navbar-center">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="ms-auto position-relative">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../dashboard/teams.html">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../manage-account/profile.html">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sign-in/sign-in.html">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5 pt-4">
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mb-4">
+    <li class="nav-item">
+      <a class="nav-link active" href="../dashboard/myteams.html">My Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../dashboard/allTeams.html">All Teams</a>
+    </li>
+    <li class="nav-item ms-auto"">
+      <a class="nav-link" href="#">Join Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../dashboard/create-team.html">Create Teams</a>
+    </li>
+  </ul>
+
+  <!-- Team Cards -->
+  <div class="team-card">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h5 class="mb-0">Support <span class="text-warning">Captain</span></h5>
+        <small class="text-muted">🌍 Antarctica</small>
+      </div>
+      <div>
+        <span class="badge bg-secondary">2 Players</span>
+        <span class="badge bg-success">1 Flag</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-card">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h5 class="mb-0">HacktheboxCorp <span class="text-info">Member</span></h5>
+        <small class="text-muted">🇬🇧 United Kingdom</small>
+      </div>
+      <div>
+        <span class="badge bg-secondary">13 Players</span>
+        <span class="badge bg-warning">0 Flags</span>
+        <span class="badge bg-light text-dark">Business</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-card">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h5 class="mb-0">HackTheBox <span class="text-info">Member</span></h5>
+        <small class="text-muted">🇬🇧 United Kingdom</small>
+      </div>
+      <div>
+        <span class="badge bg-secondary">31 Players</span>
+        <span class="badge bg-success">29 Flags</span>
+        <span class="badge-status">Pending Approval</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

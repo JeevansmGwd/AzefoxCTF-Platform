@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CTF Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+  </head>
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+    
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../challenges/challenge.html">CTF Challenges </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/completedChallenges.html">Completed Machines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/badges.html">Badges</a>
+        </li>
+      </ul>
+      <form class="d-flex navbar-center">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="ms-auto position-relative"> <!-- Ensures the dropdown stays aligned -->
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../dashboard/myteams.html">Teams </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../manage-account/profile.html">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sign-in/sign-in.html">Log Out</a>
+            </li>
+          </ul>
+      </div>    
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+  <!-- User Profile -->
+  <div style="margin-top: 5px;"  class="row mb-4">
+      <div class="col-12">
+          <div style="background-color:honeydew;"class="p-5 rounded shadow">
+              <h4 style="text-align: center; font-family:monospace; ">Welcome, User123!</h4>
+          </div>
+      </div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card bg-primary text-white mb-3">
+              <div class="card-body">
+                  <h5 class="card-title">Total Challenges</h5>
+                  <p class="card-text">20</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card bg-success text-white mb-3">
+              <div class="card-body">
+                  <h5 class="card-title">Solved Challenges</h5>
+                  <p class="card-text">12</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card bg-warning text-dark mb-3">
+              <div class="card-body">
+                  <h5 class="card-title">Participants</h5>
+                  <p class="card-text">45</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card bg-danger text-white mb-3">
+              <div class="card-body">
+                  <h5 class="card-title">Pending Challenges</h5>
+                  <p class="card-text">8</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+ 
+  <div class="container mt-2 p-5">
+    
+          <h5  style="justify-content: center;" class="mb-0 text-center">Top 10 Teams</h5>
+      
+      <div class="card-body">
+          <canvas id="topTeamsChart" height="100"></canvas>
+      </div>
+  </div>
+   <!-- Leaderboard and Recent Activity -->
+    <div class="card ">
+        <div class="card-header text-center" >
+            <h5  class="mb-0">Leaderboard</h5>
+        </div>
+        <div class="card-body p-0">
+            <table  class="table text-center table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">Place</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#" class="text-decoration-none">Marie</a></td>
+                        <td>3759</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#" class="text-decoration-none">Carl</a></td>
+                        <td>3710</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#" class="text-decoration-none">Megan</a></td>
+                        <td>3313</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#" class="text-decoration-none">Tiffany</a></td>
+                        <td>3150</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="#" class="text-decoration-none">David</a></td>
+                        <td>3097</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container mt-5 p-1" >
+        <div class="card">
+            <div class="card-header text-center">Recent Activity</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Player1 solved Crypto Challenge 1</li>
+                <li class="list-group-item">Player2 solved Web Challenge 3</li>
+                <li class="list-group-item">Player3 attempted Forensics Challenge 2</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+      
+
+  
+</body>
+<!-- Chart.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById('topTeamsChart')?.getContext('2d');
+        if (ctx) {
+            const topTeamsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Marie', 'Carl', 'Megan', 'Tiffany', 'David', 'Alex', 'John', 'Emma', 'Liam', 'Sophia'],
+                    datasets: [{
+                        label: 'Score',
+                        data: [3759, 3710, 3313, 3150, 3097, 3050, 2980, 2900, 2850, 2800],
+                        backgroundColor: [
+                            '#4CAF50', '#2196F3', '#FFC107', '#F44336', '#9C27B0',
+                            '#FF5722', '#3F51B5', '#00BCD4', '#8BC34A', '#E91E63'
+                        ],
+                        borderColor: '#ddd',
+                        borderWidth: 1,
+                        borderRadius: 5,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#555'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#555'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                color: '#555'
+                            }
+                        }
+                    }
+                }
+            });
+        } else {
+            console.error("Canvas element for Chart.js not found!");
+        }
+    });
+</script>
+</html>
+
+
+
+    
+
+ 

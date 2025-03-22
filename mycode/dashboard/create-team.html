@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Team - CTF Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../challenges/challenge.html">CTF Challenges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/completedChallenges.html">Completed Machines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/badges.html">Badges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/myteams.html">Teams</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../manage-account/profile.html">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../sign-in/sign-in.html">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header text-center">
+          <h4>Create a New Team</h4>
+        </div>
+        <div class="card-body">
+          <form id="createTeamForm">
+            <!-- Team Name -->
+            <div class="mb-3">
+              <label for="teamName" class="form-label">Team Name</label>
+              <input type="text" class="form-control" id="teamName" placeholder="Enter team name" required />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="teamDescription" class="form-label">Team Description</label>
+              <textarea class="form-control" id="teamDescription" rows="3" placeholder="Add a short description" required></textarea>
+            </div>
+
+            <!-- Add Team Members -->
+            <div class="mb-3">
+              <label for="teamMembers" class="form-label">Add Members (comma-separated)</label>
+              <input type="text" class="form-control" id="teamMembers" placeholder="e.g., user1, user2, user3" />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Create Team</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Message -->
+<div class="container mt-3">
+  <div id="successMessage" class="alert alert-success d-none" role="alert">
+    Team created successfully!
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS for Form Handling -->
+<script>
+  document.getElementById('createTeamForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const teamName = document.getElementById('teamName').value.trim();
+    const teamDescription = document.getElementById('teamDescription').value.trim();
+    const teamMembers = document.getElementById('teamMembers').value.split(',').map(member => member.trim());
+
+    if (teamName && teamDescription) {
+      console.log('Team Name:', teamName);
+      console.log('Team Description:', teamDescription);
+      console.log('Team Members:', teamMembers);
+
+      // Show success message
+      const successMessage = document.getElementById('successMessage');
+      successMessage.classList.remove('d-none');
+
+      // Clear form
+      document.getElementById('createTeamForm').reset();
+
+      // Hide success message after 3 seconds
+      setTimeout(() => {
+        successMessage.classList.add('d-none');
+      }, 3000);
+    }
+  });
+</script>
+
+</body>
+</html>

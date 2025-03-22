@@ -1,0 +1,50 @@
+.challenge-details-card-section{
+    margin: 20px 30px
+}
+
+.back-button-challenge{
+    margin: 20px 30px
+}
+
+.challenge-details-card-section .card-custom{
+    border-color: rgba(174, 139, 47, 1);
+    margin: 20px 0px;
+}
+
+.card-custom:hover{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 213, 3, 0.394));
+
+}
+
+.back-button-challenge .btn-back-css{
+    color:black;
+    padding:10px 30px;
+}
+
+.filename{
+    margin: 20px 30px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: monospace;
+    
+}
+
+.challenge-details-card-section .card-custom .card-body .rightmost{
+    right: 0;
+    padding: 10px 20px;
+    background-color: rgba(174,139,47,1);
+    border: none;
+    font-size: small;
+    transition: rgba(214,174,77,1) 0.1s ease;
+    
+}
+.challenge-details-card-section .card-custom .card-body .rightmost:hover{
+    background-color: rgba(214,174,77,1);
+    transition: rgba(214,174,77,1) 0.1s ease;
+    
+}
+.challenge-details-card-section .card-custom .card-body .right-align{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+}

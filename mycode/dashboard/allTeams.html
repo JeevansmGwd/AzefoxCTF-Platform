@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Teams - CTF</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .navbar {
+      background-color: #1e1e1e !important;
+    }
+    .nav-link {
+      color: #bbb;
+    }
+    .nav-link.active {
+      color: #ffffff;
+      border-bottom: 2px solid #4caf50;
+    }
+
+    .nav-link:hover {
+      color: black;
+      background-color: aliceblue;
+      border-bottom: 2px solid #4caf50;
+    }
+    .team-card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .team-card:hover {
+      background-color: #2a2a2a;
+    }
+    .badge-status {
+      background-color: #ff4081;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .btn-primary, .btn-outline-light {
+      border-radius: 20px;
+    }
+  
+  .custom-dark-table {
+    width: 100%;
+    color: #fff;
+    background-color: #1c1c1e;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .custom-dark-table th {
+    background-color: #2c2c2e;
+    color: #fff;
+    padding: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(174, 139, 47);
+  }
+
+  .custom-dark-table td {
+    padding: 14px;
+    border-bottom: 1px solid #333;
+  }
+
+  .custom-dark-table tbody tr:nth-child(even) {
+    background-color: #262626;
+  }
+
+  .custom-dark-table tbody tr:nth-child(odd) {
+    background-color: #1c1c1e;
+  }
+
+  .custom-dark-table tbody tr:hover {
+    background-color: #333;
+    transition: background-color 0.2s ease;
+  }
+
+  .custom-dark-table a {
+    color: #4caf50;
+    font-weight: 500;
+  }
+
+  .custom-dark-table a:hover {
+    color: #66bb6a;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../challenges/challenge.html">CTF Challenges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/completedChallenges.html">Completed Machines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/badges.html">Badges</a>
+        </li>
+      </ul>
+      <form class="d-flex navbar-center">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="ms-auto position-relative">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../dashboard/teams.html">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../manage-account/profile.html">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sign-in/sign-in.html">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5 pt-4">
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mb-4">
+    <li class="nav-item">
+      <a class="nav-link " href="../dashboard/myteams.html">My Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="../dashboard/allTeams.html">All Teams</a>
+    </li>
+    <li class="nav-item ms-auto"">
+      <a class="nav-link" href="#">Join Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Create Teams</a>
+    </li>
+  </ul>
+
+<!-- all teams -->
+
+  <div class="card-body p-0">
+    <table class="table custom-dark-table text-center">
+        <thead>
+            <tr>
+                <th scope="col">Position</th>
+                <th scope="col">Team Name</th>
+                <th scope="col">Points</th>
+                <th scope="col">Events</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="#" class="text-decoration-none text-light">Marie</a></td>
+                <td>3759</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#" class="text-decoration-none text-light">Carl</a></td>
+                <td>3710</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#" class="text-decoration-none text-light">Megan</a></td>
+                <td>3313</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#" class="text-decoration-none text-light">Tiffany</a></td>
+                <td>3150</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#" class="text-decoration-none text-light">David</a></td>
+                <td>3097</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+  
+  
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#customDropdown {
+  right: 0 !important; /* Align dropdown to button’s right */
+  left: auto !important; /* Prevent it from shifting left */
+  min-width: 150px; /* Set a reasonable width */
+  max-width: 250px; /* Prevent it from stretching too much */
+  
+  transform: translateY(7px);
+  
+  }
+  

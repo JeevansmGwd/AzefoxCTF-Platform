@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+    <link href="challenge-details.css" rel="stylesheet">
+
+  </head>
+<body>
+<section>   
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../dashboard/index.html">Azefox</a>
+      
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../challenges/challenge.html">CTF Challenges </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dashboard/completedChallenges.html">Completed Machines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dashboard/badges.html">Badges</a>
+          </li>
+        </ul>
+        <form class="d-flex navbar-center">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="d-flex justify-content-end"> <!-- Ensures the dropdown stays aligned -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img height="20px" width="20px" src="../assets/brand/settings.png">
+            </button>
+            <ul class="dropdown-menu" id="customDropdown">
+              <li><a class="dropdown-item" href="../manage-account/profile.html">Manage Account</a></li>
+              <li><a class="dropdown-item" href="../sign-in/sign-in.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</section> 
+<div class="back-button-challenge">
+  <a class="btn btn-outline-secondary btn-back-css" href="challenge.html">Back</a>
+</div>
+
+<div class="filename">
+  [Challenge Name]
+</div>
+<div class="challenge-details-card-section">
+  <div class="card card-custom">
+    <div class="card-body">
+      <h5 class="card-title">About Release</h5>
+      <p class="card-text">Name:</p>
+      <p class="card-text">Date Release: </p>
+      <p class="card-text">Author:</p>
+    
+      <p class="card-text">Series: </p>
+      <div class="right-align">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+     
+    </div>
+  </div>
+
+
+  <div class="card card-custom">
+    <div class="card-body">
+      <h5 class="card-title">Download</h5>
+      <p class="card-text">[Filename]</p>
+      <p class="card-text">Download: [download href]</p>  
+      <div class="right-align">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>   
+    </div>
+   
+  </div>
+  <div class="card card-custom">
+    <div class="card-body">
+      <h5 class="card-title">Description</h5>
+      <p class="card-text">Description of the Challenge</p>
+      <p class="card-text"><small class="text-muted">Difficulty: [ ]</small></p>
+      <div class="right-align">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+   
+  </div>
+  <div class="card card-custom">
+    <div class="card-body">
+      <h5 class="card-title">File Information</h5>
+      <p class="card-text">File Size: </p>
+      <p class="card-text">MD5:</p>
+      <p class="card-text">SHA1:</p>
+      <div class="right-align">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="card card-custom">
+    <div class="card-body">
+      <h5 class="card-title">Virtual Machine</h5>
+      <p class="card-text">Format: </p>
+      <p class="card-text">Operating System: </p>
+      <div class="right-align">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="card card-custom">
+      <div class="card-body">
+        <h5 class="card-title">Networking</h5>
+        <p class="card-text">DHCP Server: </p>
+        <p class="card-text">IP Address: </p>
+        <div class="right-align">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary rightmost" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            ?
+          </button>
+        
+  
+          <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  
+
+
+</main>
+  
+
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  
+        <script src="sidebars.js"></script>
+    </body>
+
+   
+
+</html>
